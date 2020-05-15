@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load shield_filters %}
+
+{% block title %} Listado de equipos conocidos {% endblock %}
+
+{% block content %}
+
+<div class="columns">
+
+{% for team in items  %}
+    <div class="column is-one-third">
+        <h2 class="title">
+<!--        <a href="/teams/{{ team.slug }}">-->
+            <a href="{% url 'detail_team' team.slug %}">
+            {{ team.name }}
+            </a>
+        </h2>
+        <h3 class="subtitle">{{ team.description }}</h3>
+    </div>
+{% endfor %}
+
+</div>
+
+{% endblock content %}

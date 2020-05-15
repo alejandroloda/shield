@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load leaflet_tags %}
+
+{% block js %}{% leaflet_js %}{% endblock %}
+{% block css %}{% leaflet_css %}{% endblock %}
+
+{% block title %}SHIELD Homepage{% endblock title %}
+
+
+{% block content %}
+
+    <h1 class="title">SHIELD</h1>
+    <h2 class="subtitle">Strategic Homeland Intervention, Enforcement, and Logistics Division</h2>
+
+    <p>Welcome to our webpage!</p>
+
+
+{% leaflet_map "globalmap" %}
+
+{% endblock content %}
